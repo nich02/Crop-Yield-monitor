@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Homepage</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/fontawesome-free-5.9.0-web/css/fontawesome.css" />
+    <link rel="stylesheet" href="/static/fontawesome-free-5.9.0-web/css/all.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/flaticon.css" />
+    <link rel="stylesheet" href="/static/bootstrap/js/bootstrap.min.js" />
+    <link rel="stylesheet" href="/static/bootstrap/js/bootstrap.bundle.min.js" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/animate.css" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css" />
+    <link href="plugins/video-js/video-js.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/about_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <div class="menu-bar">
+        <ul class="success">
+            <nav class="navbar fixed-top navbar navbar-expand-sm navbar-light bg-danger">
+                <h3 class="px-1">
+                    <img src="../static/images/farmer.jpg" class="photo" />Agro Insurance Consulting
+                </h3>
+                <a href="" class="navbar-brand">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+
+                    <li>
+
+                        <a href="{{url_for('predict')}}"><i class="fas fa-home"></i>HOME</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('about')}}"><i class="fas fa-database"></i>ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('services')}}"><i class="fas fa-user"></i>Our Services</a>
+                    </li>
+
+
+                    <li>
+                        <a href="{{url_for('contact')}}">
+                            <i class="fas fa-phone"></i>Contact Us</a>
+                    </li>
+
+                    <div class="input-group" style="width: 100px;">
+
+                        <input type=" search " class="form-control rounded " placeholder="Search " aria-label=" Search " aria-describedby="search-addon " />
+                        <button type="button " class="btn btn-outline-primary ">search</button>
+                    </div>
+                </a>
+            </nav>
+        </ul>
+    </div>
+</head>
+
+<body class='bod'>
+
+
+
+
+
+
+
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <div class='container'>
+        <div class="row ">
+            <div class='column'>
+                <h1>CROP YIELD PREDICTION FORM</h1>
+                <h4 style="color: black; ">Good Morning,Afternoon or Evening Dear Farmer kindly fill the form* below</h4>
+                <div class="forn ">
+                    <form action="{{ url_for( 'predict')}} " method="post ">
+                        <div class="form-group ">
+                            <input type="number " min="0 " required name="temperature " placeholder="Enter your temperature " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="number " min="0 " required name="humidity " placeholder="Enter your humidity level " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="number " min="0 " required name="ph " placeholder="Enter your soil ph level " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="number " required name="rainfall " placeholder="Enter rainfall amount in mm " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="text " required name="crop " placeholder="Enter your type of crop " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="number " required name="area " placeholder="Enter your area of land in square metres " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="text " required name="state " placeholder="Enter your state " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="text " required name="pressure " placeholder="Enter your enviromental pressure " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <input type="number " required name="cost of_production " placeholder="Enter total cost incurred " id=" " />
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit " required class="submit ">
+                Predict
+              </button>
+                        </div>
+                    </form>
+                    <br />
+                    <b> <span style="color: black "> {{pred}} </span></b>
+                </div>
+            </div>
+            <div class='column'>
+                <div class="container-fluid">
+
+                    <div id="myCarousel " class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators ">
+                            <li data-target="#myCarousel " data-slide-to="0 " class="active "></li>
+                            <li data-target="#myCarousel " data-slide-to="1 "></li>
+                            <li data-target="#myCarousel " data-slide-to="2 "></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+
+                            <div class="item active">
+                                <img src="../static/images/ilust.jpg" alt="Los Angeles " style="width:200%;">
+                                <div class="carousel-caption ">
+                                    <h3>Nairobi Kenya</h3>
+                                    <p>Nairobi is always so much fun!</p>
+                                </div>
+                            </div>
+
+                            <div class="item ">
+                                <img src="../static/images/banashow.jpg " alt="Chicago " style="width:200%;">
+                                <div class="carousel-caption ">
+                                    <h3>Nyeri</h3>
+                                    <p>Thank you, Nyeri County!</p>
+                                </div>
+                            </div>
+
+                            <div class="item ">
+                                <img src="../static/images/rices.jpg " alt="New York" style="width:200%;">
+                                <div class="carousel-caption ">
+                                    <h3>Kiambu County</h3>
+                                    <p>We love the Big Apple!</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev ">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only ">Previous</span>
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel " data-slide="next ">
+                            <span class="glyphicon glyphicon-chevron-right "></span>
+                            <span class="sr-only ">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class='column'>
+
+                <h3 style="text-align: center; color:red; ">
+                    Farm Analytics
+                </h3>
+
+                <img src="../static/images/analu.jpg " alt="New York " style="width:250%; ">
+            </div>
+
+        </div>
+    </div>
+    <div class=' row '>
+
+        <div class=" column ">
+            <h2>Farmers' Corner</h2>
+            <div class="card ">
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="../static/images/farmerstrain.jpg " alt="Avatar " style="width:300px;height:300px; ">
+                        </div>
+                        <div class="flip-card-back ">
+                            <h1>Farmers' Corner</h1>
+                            <p>Trainings</p>
+                            <p>Webinars</p>
+                            <p>Synthesization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='column'>
+            <h2>Insurance Premiums</h2>
+            <div class="card ">
+
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="../static/images/insurance.jpg " alt="Avatar " style="width:300px;height:300px; ">
+                        </div>
+                        <div class="flip-card-back ">
+                            <h3>Insurance</h3>
+                            <p>Insurance Policies</p>
+                            <p>Insurance Partners</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='column'>
+            <h2>Consultancy</h2>
+            <div class='card'>
+
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="../static/images/consult.jpg " alt="Avatar " style="width:300px;height:300px; ">
+                        </div>
+                        <div class="flip-card-back ">
+                            </h3>Consultancy</h3>
+                            <p>Extension officers</p>
+                            <p>Meteorologists</p>
+                            <p>Agri Market</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='column'>
+            <h2>News</h2>
+            <div class='card'>
+
+                <div class="flip-card ">
+                    <div class="flip-card-inner ">
+                        <div class="flip-card-front ">
+                            <img src="../static/images/news.jpg " alt="Avatar " style="width:300px;height:300px; ">
+                        </div>
+                        <div class="flip-card-back ">
+                            <h3>News</h3>
+                            <p>Our history</p>
+                            <p>Crop Health</p>
+                            <p>Climate Change</p>
+                            <p>Agri Tech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="footer-section bg-warning " role="contentinfo ">
+
+        <div class="container ">
+            <div class="row mb-5 ">
+                <div class="col-md-3 mb-5 ">
+                    <h3 class="mb-4 ">Our Partners</h3>
+                    <span class="d-block caption ">
+
+
+             <span class="fab fa-amazon ">Amazon</span><br>
+
+                    <span class="fab fa-apple ">Apple</span><br>
+                    <span class="fab fa-microsoft ">Microsoft</span>
+
+
+                </div>
+                <div class="col-md-5 mb-5 pl-md-5 ">
+                    <div class="mb-5 ">
+                        <h3 class="mb-4 ">Social Media</h3>
+                        <ul class="list-unstyled footer-link d-flex footer-social ">
+                            <li><a href="# " class="p-2 "><span class="fab fa-twitter "></span></a></li>
+                            <li><a href="# " class="p-2 "><span class="fab fa-facebook "></span></a></li>
+                            <li><a href="# " class="p-2 "><span class="fab fa-linkedin "></span></a></li>
+                            <li><a href="# " class="p-2 "><span class="fab fa-instagram "></span></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="col-md-3 mb-5 pl-md-5 ">
+                    <h3 class="mb-4 ">Quick Links</h3>
+                    <ul class="list-unstyled footer-link quick-contact ">
+                        <li><a href="about.html ">About</a></li>
+                        <li><a href="# ">Terms of Use</a></li>
+                        <li><a href=" ">Disclaimers</a></li>
+                        <li><a href="contact.html ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ">
+
+                </div>
+            </div>
+            <div class="row ">
+
+                <div class="col-12 text-md-center text-left bg-success ">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <b> <p class="small ">Copyright &copy;<script>document.write(new Date().getFullYear());</script>  | Designed by <a href="https://colorlib.com " target="_blank " ><i style="color: black ">WANJOHI CHRISTOPHER NYAGA</i></a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p></b>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src=" " async defer></script>
+</body>
+
+</html>
